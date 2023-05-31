@@ -27,6 +27,13 @@ public class DijkstraSearch<V> implements Search<V> {
         }
         return null;
     }
+
+    /**
+     * Reconstructs the path from the parentMap starting from the destination vertex
+     * @param parentMap   The map containing the parent-child relationship between vertices.
+     * @param destination The destination vertex.
+     * @return The reconstructed path as a list of vertices.
+     */
     private List<V> reconstructPath(Map<Vertex<V>, Vertex<V>> parentMap, Vertex<V> destination) {
         List<V> path = new ArrayList<>();
         Vertex<V> currentVertex = destination;
